@@ -22,7 +22,8 @@ html, body {
 }
 
 body {
-	background-color:#FAF9E1;
+	/*background-color:#FAF9E1;*/
+	background-color: #fff;
 	color:#FAF9E1;
 	font-family: Arial, Helvetica, sans-serif;
 	/*text-align: center;*/
@@ -34,21 +35,31 @@ header {
 	height:150px;
 	padding:0 20px;
 }
+/*h1, h2, h3, h4 {
+	font-family: WorstveldSling;
+}*/
 h1 {
+	font-family: WorstveldSling;
 	font-size: 3em;
 	padding-left:50px;
 }
 h3 {
+	font-family: WorstveldSling;
 	font-size: 2em;
 	text-align: right;
+}
+h4 {
+	font-family: WorstveldSling;
+	font-size: 1.8em;
 }
 
 .container {
 	display: inline-block;
-	height: 100%;
+	height:100%;
 	width:820px;
 	text-align: left;
 	margin-left:100px;
+	/*overflow: hidden;*/
 }
 
 nav {
@@ -75,20 +86,39 @@ nav li:first-child {
 	margin-left:-40px;
 }
 
+nav a {
+	color: #781C0E;
+	text-decoration: none;
+}
+
 nav .selected img {
 	position: absolute;
 	z-index:-1;
 	left:125px;
 	margin-top:5px;
-	-ms-transform:rotate(60deg); /* IE 9 */
-	-webkit-transform:rotate(60deg); /* Safari and Chrome */
-	transform:rotate(60deg);
+	-webkit-transform:rotate(50deg); /* Safari and Chrome */
+	-moz-transform:rotate(50deg);
+	-ms-transform:rotate(50deg);
+	-o-transform:rotate(50deg);
+	transform:rotate(50deg);
 }
 
-.content {
-	background-color: #640615; /*#8C0B1A;*/ /*#781C0E;*/
-	padding:20px;
+#details img {
+	left:265px;
+}
+#area img {
+	left:450px;
+}
+#more img {
+	left:570px;
+}
+#rsvp img {
+	left:770px;
+}
 
+article {
+	background-color: #640615; /*#8C0B1A;*/ /*#781C0E;*/
+	min-height:100%;
 
 	-moz-border-radius: 10px 10px 0 0;
 	-webkit-border-radius: 10px 10px 0 0;
@@ -97,5 +127,37 @@ nav .selected img {
 	-moz-box-shadow: 2px 2px 3px #696969;
 	-webkit-box-shadow: 2px 2px 3px #696969;
 	box-shadow:2px 2px 3px #696969;
+}
 
+.content {
+	padding:20px;
+	/*min-height: 100%;*/
+}
+
+.content h3 {
+	/*font-size: 1.3em;*/
+	text-align: left;
+}
+.content a {
+	color:#ccc;
+}
+
+.options {
+	padding:20px;
+}
+.options a {
+	color:#ccc;
+	padding:0 20px;
+	text-decoration: none;
+}
+.options .selected {
+	text-decoration: underline;
+}
+
+.directions ol {
+	float: left;
+	width:45%;
+}
+.directions img {
+	width:45%;
 }

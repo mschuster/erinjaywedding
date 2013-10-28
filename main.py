@@ -10,11 +10,11 @@ class MainHandler(webapp.RequestHandler):
 	def get (self, q):
 
 		if not q:
-			q = 'index'
+			q = 'story'
 		# if "." not in q:
 		# 	q = q + '.html'
 
-		path = os.path.join (os.path.dirname (__file__), q + '.html')
+		path = os.path.join (os.path.dirname (__file__), 'pages/' + q + '.html')
 		self.response.headers ['Content-Type'] = 'text/html'
 		self.response.out.write (template.render (path, {}))
 
