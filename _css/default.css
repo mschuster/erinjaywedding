@@ -55,7 +55,7 @@ h4 {
 
 .container {
 	display: inline-block;
-	height:100%;
+	min-height:100%;
 	width:820px;
 	text-align: left;
 	margin-left:100px;
@@ -78,12 +78,20 @@ nav ul {
 nav li {
 	font-weight: bold;
 	float:left;
-	height:40px;
+	height:70px;
 	width:160px;
+	padding-left: 10px;
 	text-align: center;
 }
 nav li:first-child {
 	margin-left:-40px;
+}
+
+nav .selected {
+	background-image: url(/img/wine_glass_spill4.png);
+	background-repeat: no-repeat;
+	background-position: -17px 0px;
+	background-size: 203px auto;
 }
 
 nav a {
@@ -91,17 +99,6 @@ nav a {
 	text-decoration: none;
 }
 
-nav .selected img {
-	position: absolute;
-	z-index:-1;
-	left:125px;
-	margin-top:5px;
-	-webkit-transform:rotate(50deg); /* Safari and Chrome */
-	-moz-transform:rotate(50deg);
-	-ms-transform:rotate(50deg);
-	-o-transform:rotate(50deg);
-	transform:rotate(50deg);
-}
 
 #details img {
 	left:265px;
@@ -118,7 +115,7 @@ nav .selected img {
 
 article {
 	background-color: #640615; /*#8C0B1A;*/ /*#781C0E;*/
-	min-height:100%;
+	min-height:400px;
 
 	-moz-border-radius: 10px 10px 0 0;
 	-webkit-border-radius: 10px 10px 0 0;
@@ -160,4 +157,25 @@ article {
 }
 .directions img {
 	width:45%;
+}
+
+
+
+/**		STORY BOOK 		**/
+
+.imBookPage {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width: 300px;
+	height:360px;
+	color:#fff;
+	overflow:hidden;
+	border: solid 1px #000;
+}
+#iframeCntnr {
+	width:604px;
+	height:362px;
+	padding:0;
+	float:left;
 }
