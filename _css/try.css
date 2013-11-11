@@ -26,6 +26,7 @@ body {
 	color:#FAF9E1;
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
+	overflow-x:hidden;
 }
 
 article {
@@ -41,6 +42,7 @@ header {
 	color: #FAF9E1;
 	font-family: WorstveldSling;
 	height:150px;
+
 }
 
 
@@ -52,10 +54,13 @@ header img {
 	z-index: 0;
 	margin-top: 10px;
 }
+header h3 {
+	position: absolute;
+	width:100%;
+	top:100px;
+	z-index: 1;
+}
 
-/*h1, h2, h3, h4 {
-	font-family: WorstveldSling;
-}*/
 h1 {
 	font-family: WorstveldSling;
 	font-size: 3em;
@@ -66,15 +71,19 @@ h1 {
 h3 {
 	font-family: WorstveldSling;
 	font-size: 2em;
-	text-align: right;
-	z-index: 1;
-	position: absolute;
-	right: 132px;
-	top: 149px;
 }
 h4 {
 	font-family: WorstveldSling;
 	font-size: 1.8em;
+	margin:15px 0;
+}
+
+a {
+	color: #FFF;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
 }
 
 
@@ -123,13 +132,109 @@ nav a {
 	padding:0px 40px;
 }
 
+.half div {
+	display:inline-block;
+	vertical-align: text-top;
+	width:250px;
+}
+
+.story {
+	cursor:pointer;
+	padding:20px;
+	text-align:left;
+	width:500px;
+}
+.story img {
+	float:left;
+	height:100px;
+}
+.story div {
+	float:right;
+}
+
+
+
+
+.book_container {
+	display: none;
+	background-color:#222;
+	border-radius:3px;
+	box-shadow: 0px 0px 35px #FFFF99;
+	padding:5px 10px;
+	margin-left:-10px;
+	position: absolute;
+	height:362px;
+	width:800px;
+	top:200px;
+	text-align: center;
+}
+	#imBookCntnr {
+		background-color: #000;
+		position: relative;
+		display: inline-block !important;
+		width:80%;
+		height:100%;
+		padding:0;
+	}
+
+	.imBookPage {
+		background-color:#FAF9E1;
+		position:absolute;
+		left:0px;
+		top:0px;
+		width: 49%;
+		height:100%;
+		color:#fff;
+		overflow:hidden;
+		border: solid 1px #000;
+	}
+	.imBookPage .imBookPage {
+		cursor: pointer;
+		width:100%;
+	}
+
+	.book_container h3, .book_container p {
+		color:#640615;
+		top:auto;
+		vertical-align: center;
+	}
+
+	.wine_bottle {
+		position: absolute;
+		bottom:0;
+		left:-30px;
+		transform:rotate(20deg);
+	}
+
+	.beach_img {
+		margin-left:40px;
+		margin-top: 46px;
+		transform: rotate(-30deg);
+	}
+	.euro_img {
+		margin-left:-70px;
+		transform:rotate(20deg);
+	}
+
+
+
 
 @media only screen and (max-width: 820px) {
 	article {
 		width:95%;
 	}
 }
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 740px) {
 	/*do something with the nav*/
+
+	h3 {
+		top:170px;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	h3 {
+		top:250px;
+	}
 }
 

@@ -5,9 +5,9 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /(.*\.(gif|png|jpg|ico|js|css|ttf))
+- url: /(.*\.(gif|png|jpg|ico|js|css|ttf|json|ctp))
   static_files: \1
-  upload: (.*\.(gif|png|jpg|ico|js|css|ttf))
+  upload: (.*\.(gif|png|jpg|ico|js|css|ttf|json|ctp))
 
 - url: /robots.txt
   static_files: robots.txt
