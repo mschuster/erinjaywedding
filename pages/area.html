@@ -6,6 +6,7 @@
         	<link href="../_css/ie7fix.css" rel="stylesheet" type="text/css">
         <![endif]-->
         <script language="javascript" type="text/javascript" src="_js/jquery-1.4.4.min.js"></script>
+        <script language="javascript" type="text/javascript" src="_js/common.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="Description" content="Paddle to End MS is an exciting fundraiser designed for people with MS or other disabilities,
                 and for those who love and support them to experience kayaking and canoeing, perhaps for the first time.">
@@ -16,22 +17,27 @@
         <article>
             <header>
                 <h1>Erin and Jay's Wedding</h1>
-                <img src="/img/Europe_395.jpg" height="200px"/>
+                <img src="/img/Europe_395.jpg"/>
                 <h3>Love and Wine - Better With Time!</h3>
             </header>
-            <nav>
+            <nav onClick="showMenu();">
+                <div class="button">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
                 <ul>
                     <li id="story">
-                        <a href="/"> Our Story </a>
+                        <a href="/">Stories</a>
                     </li>
                     <li id="details">
-                        <a href="/details"> The Main Details </a>
+                        <a href="/details">Details</a>
                     </li>
                     <li id="area" class="selected">
-                        <a href="/area">The Area</a>
+                        <a href="/area">Location</a>
                     </li>
                     <li id="more">
-                        <a href="/more">Further Celebrations</a>
+                        <a href="/more">Lunch Out East</a>
                     </li>
                     <li id="rsvp">
                         <a href="/rsvp">RSVP</a>
@@ -39,8 +45,60 @@
                 </ul>
             </nav>
             <section>
-                <h4>Some information about Tourism and lodging in and around Golden.</h4>
-                <p>all sorts of information</p>
+                <h4>
+                    Directions to Heather Mountain Lodge
+                </h4>
+                <p>
+                    5400 West Highway, Golden, BC -
+
+                    <a href="javascript:void(0)" class="directions revelstoke" onclick="$('.directions').slideToggle(1);">From the East</a>
+                    <a href="javascript:void(0)" class="directions" onclick="$('.directions').slideToggle(1);">From the West</a>
+                </p>
+            </section>
+            <section id="golden" class="directions">
+                <ol>
+                    <h4>From the East</h4>
+                    <li>Head north on BC-95 N toward 11 Ave S</li>
+                    <li>Turn left to stay on BC-95 N</li>
+                    <li>Turn left onto BC-1 W/Trans-Canada Hwy</li>
+                    <li>Turn right onto Rogers Rd</li>
+                    <li>Turn left</li>
+                </ol>
+                <a href="https://maps.google.ca/maps?saddr=Golden,+BC&daddr=Heather+Mountain+Lodge,+Golden,+BC&hl=en&ll=51.412912,-117.226868&spn=0.551604,0.811615&sll=51.404183,-117.222271&sspn=0.551708,0.811615&geocode=FXe3DgMdv0gH-SlpTrFjnL95UzFBRLYzySoEGg%3BFb-CEQMd213_-CEZr5bp2oMykCmzS9pU6x96UzEZr5bp2oMykA&oq=heather+mountain+lodge,+B&gl=ca&mra=ls&t=m&z=10" target="_blank"><img src="/img/directions.png"></a>
+            </section>
+            <section class="directions revelstoke">
+                <ol>
+                    <h4>From the West</h4>
+                    <li>Head southeast on 2 St E toward Orton Ave</li>
+                    <li>Turn right onto Victoria Rd</li>
+                    <li>Take the 1st left onto 4 St E</li>
+                    <li>Take the 1st left onto Townley St</li>
+                    <li>Turn right onto BC-1 E/Trans-Canada Hwy</li>
+                    <li>Turn left onto Rogers Rd</li>
+                    <li>Turn left</li>
+                </ol>
+                <a href="https://maps.google.ca/maps?saddr=Revelstoke,+BC&daddr=Heather+Mountain+Lodge,+Golden,+BC&hl=en&ll=51.385495,-117.504272&spn=2.207812,3.24646&sll=51.313447,-117.496033&sspn=1.105614,1.62323&geocode=FWMrCgMdKHr0-Cml3Wr6BTd5UzHK79a5fWQ8Tw%3BFb-CEQMd213_-CEZr5bp2oMykCmzS9pU6x96UzEZr5bp2oMykA&oq=Revels&gl=ca&mra=ls&t=m&z=8"><img src="/img/reve-directions.png" target="_blank"></a>
+            </section>
+            <section>
+                <p>More information about the lodge: <a href="http://www.heathermountainlodge.com/index.php?page=location" target="_blank">www.heathermountainlodge.com</a></p>
+            </section>
+            <section class="half">
+                <div>
+                    <h4>Accomodations in the Area</h4>
+                    <ul>
+                        <li>This hotel at <a href="">this website</a></li>
+                        <li>That motel at <a href="">that website</a></li>
+                        <li>This B&B at <a href="">this other website</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Tourism in the Area</h4>
+                    <ul>
+                        <li>This stuff at <a href="">this website</a></li>
+                        <li>That stuff at <a href="">that website</a></li>
+                        <li>This other stuff at <a href="">this other website</a></li>
+                    </ul>
+                </div>
             </section>
         </article>
     </body>

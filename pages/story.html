@@ -6,6 +6,7 @@
         	<link href="../_css/ie7fix.css" rel="stylesheet" type="text/css">
         <![endif]-->
         <script language="javascript" type="text/javascript" src="_js/jquery-1.4.4.min.js"></script>
+        <script language="javascript" type="text/javascript" src="_js/common.js"></script>
         <script language="javascript" type="text/javascript" src="_js/ jquery.imBookFlip-1.3.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="Description" content="Erin and Jay's Wedding on August 16th near Golden">
@@ -16,22 +17,27 @@
         <article>
             <header>
                 <h1>Erin and Jay's Wedding</h1>
-                <img src="/img/Europe_395.jpg" height="200px"/>
+                <img src="/img/Europe_395.jpg"/>
                 <h3>Love and Wine - Better With Time!</h3>
             </header>
-            <nav>
+            <nav onClick="showMenu();">
+                <div class="button">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
                 <ul>
                     <li id="story" class="selected">
-                        <a href="/"> Our Story </a>
+                        <a href="/"> Stories </a>
                     </li>
                     <li id="details">
-                        <a href="/details"> The Main Details </a>
+                        <a href="/details"> Details </a>
                     </li>
                     <li id="area" >
-                        <a href="/area">The Area</a>
+                        <a href="/area">Location</a>
                     </li>
                     <li id="more">
-                        <a href="/more">Further Celebrations</a>
+                        <a href="/more">Lunch Out East</a>
                     </li>
                     <li id="rsvp">
                         <a href="/rsvp">RSVP</a>
