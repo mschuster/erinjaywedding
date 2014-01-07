@@ -57,7 +57,7 @@
                 <img src="/img/family_pic.jpg"/>
             </section>
 
-            <section class="story party" onclick="openBook('boy')">
+            <section class="story party" onclick="openBook('groomsmen')">
                 <img class="left" src="/img/family_pic.jpg"/>
                 <img class="right" src="/img/family_pic.jpg"/>
                 <div class="honor">
@@ -67,7 +67,7 @@
                 </div>
             </section>
 
-            <section class="story party" onclick="openBook('boy')">
+            <section class="story party" onclick="openBook('bridesmaids')">
                 <img class="left" src="/img/family_pic.jpg"/>
                 <img class="right" src="/img/family_pic.jpg"/>
                 <div class="honor">
@@ -85,7 +85,11 @@
     </body>
     <script type="text/javascript">
         function openBook(story) {
-            $("#book_container").fadeIn(400);
+            var book_container = $("#book_container");
+            if(book_container.css("display") != "none") {
+                return false;
+            }
+            book_container.fadeIn(400);
 
             story = story || 'main';
             var src_url = '/pages/stories/lists/'+story+'.json';
@@ -100,21 +104,21 @@
             var htmlTag = document.getElementsByTagName('html')[0];
 
             setTimeout(function() {
-                htmlTag.onclick = function() {
-                    $("#book_container").fadeOut(400);
+                htmlTag.onclick = function(ev, i) {
+                    book_container.fadeOut(400);
                     htmlTag.onclick = null;
                 };
             }, 1000);
 
-                document.onkeydown = function(evt) {
-                    evt = evt || window.event;
-                    if (evt.keyCode == 27) {
-                        $("#book_container").fadeOut(400);
-                        htmlTag.onclick = null;
-                    }
-                };
-
-            $('#book_container').click(function(event){
+            document.onkeydown = function(evt) {
+                evt = evt || window.event;
+                if (evt.keyCode == 27) {
+                    book_container.fadeOut(400);
+                    htmlTag.onclick = null;
+                    $("#imBookCntnr").html("");
+                }
+            };
+            book_container.click(function(event){
                 event.stopPropagation();
             });
         }

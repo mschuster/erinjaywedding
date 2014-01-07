@@ -84,6 +84,11 @@ h4 {
 	font-size: 1.8em;
 	margin:15px 0;
 }
+h5 {
+	font-family: WorstveldSling;
+	font-size: 1.5em;
+	margin:0;
+}
 
 a {
 	color: #FFF;
@@ -93,6 +98,9 @@ a:hover {
 	text-decoration: underline;
 }
 
+.hidden {
+	display: none;
+}
 
 nav {
 	background-color: #FFFFE6;
@@ -153,6 +161,28 @@ nav a {
 	text-decoration: none;
 }
 
+.line {
+	background-color: #fff;
+	opacity: 0.5;
+	height:3px;
+	width: 100%;
+}
+
+.simple {
+	padding:0 20px;
+	text-align: left;
+}
+.signature {
+	font-family: WorstveldSling;
+	font-size: 1.4em;
+	margin:0.4em;
+	text-align: right;
+}
+.main-details {
+	display: inline-block;
+	max-width: 530px;
+}
+
 .small{
 	padding-bottom:10px;
 }
@@ -160,7 +190,8 @@ nav a {
 .half div {
 	display:inline-block;
 	vertical-align: text-top;
-	width:300px;
+	width: 330px;
+	padding: 10px 20px;
 }
 
 .directions ol, .directions a, .directions img {
@@ -211,6 +242,16 @@ nav a {
 	float: right;
 }
 
+
+.background-cover {
+	background: transparent;
+	display:none;
+	position:absolute;
+	min-height:100%;
+	width: 100%;
+	z-index: 1;
+	border:5px solid black;
+}
 .book_container {
 	display: none;
 	background-color:#222;
@@ -223,6 +264,7 @@ nav a {
 	width:800px;
 	top:200px;
 	text-align: center;
+	/*z-index: 100;*/
 }
 	#imBookCntnr {
 		background-color: #000;
@@ -253,6 +295,9 @@ nav a {
 		color:#640615;
 		top:auto;
 		vertical-align: center;
+	}
+	.book_container p {
+		padding:20px;
 	}
 
 	.wine_bottle {

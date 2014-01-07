@@ -1,0 +1,3 @@
+<p>
+	Shannon Iwamoto – another person who has been in Erin’s life since she can remember. Helps if you’re family! Shannon is Erin’s cousin on Bonnie’s side of the family, and grew up attending many gatherings from birthday parties, to thanksgivings, Halloweens, Christmas dinners and more! Shannon graciously agreed to assist in wedding planning (and even to be a personal consultant) during the whole planning year!!
+</p>
