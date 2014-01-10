@@ -85,8 +85,7 @@ h4 {
 	margin:15px 0;
 }
 h5 {
-	font-family: WorstveldSling;
-	font-size: 1.5em;
+	font-size: 1em;
 	margin:0;
 }
 
@@ -194,31 +193,53 @@ nav a {
 	padding: 10px 20px;
 }
 
-.directions ol, .directions a, .directions img {
+.directions ol, .directions img {
 	display: inline-block;
 	text-align: left;
 	vertical-align: top;
 	width:350px;
+}
+.directions h4 a {
+	font-family: sans-serif;
+	font-size:0.5em;
+	padding-left:30px;
 }
 
 .revelstoke {
 	display:none;
 }
 
-.story {
-	cursor:pointer;
-	padding:20px;
-	text-align:left;
-}
-.story h4, .story p {
+/** STORIES **/
+.story h4, .main p {
 	margin:0;
 }
 .story img {
 	height:100px;
 }
 
+.story .button {
+	border-radius: 5px;
+	box-shadow: 0 0 3px 0 #E6E6E6;
+	cursor:pointer;
+	display: inline-block;
+	padding:20px;
+}
+.story .button:hover {
+	/* article: 640615 */
+	background-color: #77333D;
+	/* 741F2C; */
+}
+.story .list {
+	display: none;
+	padding:10px 0;
+}
+
 .main {
+	padding:20px;
 	text-align: center;
+}
+.main .button {
+	width:75%;
 }
 
 .party {
@@ -226,20 +247,32 @@ nav a {
 	text-align: center;
 	width:320px;
 }
-.party img {
-	height:75px;
+.party .button {
+	height:30px;
+	width:200px;
 }
-.party .honor {
-	clear:both;
-	width:100%;
+
+footer {
+	height:20px;
+	padding: 30px 30px 5px 30px;
 }
-.party .left {
-	transform:rotate(-5deg);
-	float: left;
+footer p {
+	color:#fff;
+	font-size: 0.8em;
+	margin: 0;
+	text-align: right;
 }
-.party .right {
-	transform:rotate(5deg);
-	float: right;
+
+
+.rsvp {
+	padding-left:20px;
+	text-align: left;
+}
+.rsvp .with {
+	/*display:none;*/
+	margin-top:-5px;
+	padding-left:30px;
+	padding-bottom: 10px;
 }
 
 
@@ -385,6 +418,25 @@ nav a {
 	}
 	.selected a {
 		margin-left: 100px;
+	}
+
+	.story .button {
+		cursor:auto;
+		display: inline-block;
+	}
+	.story .button:hover {
+		/* article: 640615 */
+		background-color: transparent;
+		/* 741F2C; */
+	}
+	.story .list {
+		display:block;
+	}
+
+	.main .button {
+		box-shadow:none;
+		padding:0;
+		width:auto;
 	}
 
 }

@@ -11,13 +11,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="Description" content="Paddle to End MS is an exciting fundraiser designed for people with MS or other disabilities,
                 and for those who love and support them to experience kayaking and canoeing, perhaps for the first time.">
-        <title>Erin and Jay's Wedding</title>
+        <title>Erin and Jason's Wedding</title>
     </head>
 
     <body>
         <article>
             <header>
-                <h1>Erin and Jay's Wedding</h1>
+                <h1>Erin and Jason's Wedding</h1>
                 <img src="/img/Europe_395.jpg"/>
                 <h3>Love and Wine - Better With Time!</h3>
             </header>
@@ -35,7 +35,7 @@
                         <a href="/details"> Details </a>
                     </li>
                     <li id="area">
-                        <a href="/area">Location</a>
+                        <a href="/area">Accommodations</a>
                     </li>
                     <li id="more">
                         <a href="/more">Lunch Out East</a>
@@ -47,8 +47,89 @@
             </nav>
             <section>
                 <h4>RSVP</h4>
-                <p>There will be a form here to RSVP which will send a lovely email to the bride and groom</p>
             </section>
+            <form class="rsvp">
+                <p>
+                    <label>Name:</label><br/>
+                    <input type="text" placeholder="Your Name"><br/>
+                </p>
+                <p>I'm planning on attending:</p>
+                <p>
+                    <input type="radio" name="event" onclick="$('.west').show(); $('.east').hide()">
+                    <label>The Celebration in the WEST on August 16th</label> <br/>
+                    <input type="radio" name="event" onclick="$('.west').hide(); $('.east').show()">
+                    <label>The Celebration in the EAST on August 23rd</label> <br/>
+                    <input type="radio" name="event" onclick="$('.west').show(); $('.east').show()">
+                    <label>BOTH!! Let's DO this!!!</label> <br/>
+                    <input type="radio" name="event" onclick="$('.west').hide(); $('.east').hide()">
+                    <label>Unfortunately I won't be able to make it to either.</label> <br/>
+
+                </p>
+                <h5 class="west">For the Celebration in the WEST (on August 16th)</h5>
+                <div id="west" class="with west">
+                    <p>
+                        <input type="checkbox">I will be bringing a guest:
+                        <input id="guestName" name="guestName" type="text" placeholder="Your guest's name" size="30" onclick="$(this).val('');">
+                    </p>
+                    <p>
+                        <input type="checkbox">and my children:
+                        <input id="guestName" name="guestName" type="text" placeholder="Your children(s) name(s)" size="30" onclick="$(this).val('');">
+                    </p>
+
+
+                    <p>I am interested in staying for:</p>
+                    <p>
+                        <input type="radio" name="stay" value="1"> One Night <br/>
+                        <input type="radio" name="stay" value="2+"> Two or more nights
+                    </p>
+
+
+                    <p>Please count me (and my party) in for Brunch on Sunday morning</p>
+                    <p>
+                        <input type="radio" name="brunch" value="yes">Yes<br/>
+                        <input type="radio" name="brunch" value="no">No
+                    </p>
+                </div>
+
+                <h5 class="east">For the Celebration in the EAST (on August 23rd)</h5>
+                <div class="with east">
+                    <p>
+                        <input type="checkbox">I will be bringing a guest:
+                        <input id="guestName" name="guestName" type="text" placeholder="Your guest's name" size="30" onclick="$(this).val('');">
+                    </p>
+                    <p>
+                        <input type="checkbox">and my children:
+                        <input id="guestName" name="guestName" type="text" placeholder="Your children(s) name(s)" size="30" onclick="$(this).val('');">
+                    </p>
+                </div>
+                <p>Address:</p>
+                <p>
+                    <table>
+                        <tr>
+                            <td>Appt / Suite #</td>
+                            <td><input size="5" placeholder="Appt#"></td>
+                        </tr>
+                        <tr>
+                            <td>Street</td>
+                            <td><input size="50" placeholder="Street Number/Name"></td>
+                        </tr>
+                        <tr>
+                            <td>City, Province</td>
+                            <td><input placeholder="City"> <input size="5" placeholder="Prov"></td>
+                        </tr>
+                        <tr>
+                            <td>Postal Code</td>
+                            <td><input size="10" placeholder="Postal Code"></td>
+                        </tr>
+                    </table>
+                </p>
+                <p>Any Questions or Comments:</p>
+                <textarea cols="35" rows="5"></textarea>
+
+                <footer>
+                    <input type="submit" value="Submit Form">
+                </footer>
+            </form>
         </article>
 
     </body>

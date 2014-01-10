@@ -1,3 +1,3 @@
 <p>
-	Tommy's story
+	Shane's story
 </p>

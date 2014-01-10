@@ -7,16 +7,15 @@
         <![endif]-->
         <script language="javascript" type="text/javascript" src="_js/jquery-1.4.4.min.js"></script>
         <script language="javascript" type="text/javascript" src="_js/common.js"></script>
-        <script language="javascript" type="text/javascript" src="_js/ jquery.imBookFlip-1.3.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="Description" content="Erin and Jay's Wedding on August 16th near Golden">
-        <title>Erin and Jay's Wedding</title>
+        <meta name="Description" content="Erin and Jason's Wedding on August 16th near Golden">
+        <title>Erin and Jason's Wedding</title>
     </head>
 
     <body>
         <article>
             <header>
-                <h1>Erin and Jay's Wedding</h1>
+                <h1>Erin and Jason's Wedding</h1>
                 <img src="/img/Europe_395.jpg"/>
                 <h3>Love and Wine - Better With Time!</h3>
             </header>
@@ -34,7 +33,7 @@
                         <a href="/details"> Details </a>
                     </li>
                     <li id="area" >
-                        <a href="/area">Location</a>
+                        <a href="/area">Accommodations</a>
                     </li>
                     <li id="more">
                         <a href="/more">Lunch Out East</a>
@@ -45,35 +44,49 @@
                 </ul>
             </nav>
             <section class="story main" onclick="openBook()">
-                <img src="/img/story/camera_051.jpg"/>
+                <div class="button">
+                    <img src="/img/story/camera_051.jpg"/>
 
-                <h4>A little bit about the bride and groom</h4>
-                <p>This can be a quick blurb about Mr. Jay and Ms. Erin (soon to be Mrs. Jay)</p>
-            </section>
-            <section class="story main" onclick="openBook('boy')">
-                <div>
-                    <h4>Alex, the Best Boy</h4>
+                    <h4>A little bit about the bride and groom</h4>
+                    <p>This can be a quick blurb about Mr. Jason and Ms. Erin (soon to be Mrs. Jason)</p>
                 </div>
+            </section>
+            <section class="story main">
+                <h4>The Best Boy</h4>
                 <img src="/img/family_pic.jpg"/>
+                <h4>Alex</h4>
             </section>
 
             <section class="story party" onclick="openBook('groomsmen')">
-                <img class="left" src="/img/family_pic.jpg"/>
-                <img class="right" src="/img/family_pic.jpg"/>
-                <div class="honor">
+                <div class="button">
                     <h4>The Grooms Men</h4>
-                    <img src="/img/family_pic.jpg"/>
-                    <img src="/img/family_pic.jpg"/>
+                </div>
+                <div class="list">
+                    <h5>Best Man</h5>
+                    <p>Shawn Ewert</p>
+                    <h5>Groomsmen</h5>
+                    <p>
+                        Tommy LePitre<br/>
+                        Mark Jones
+                    </p>
                 </div>
             </section>
 
             <section class="story party" onclick="openBook('bridesmaids')">
-                <img class="left" src="/img/family_pic.jpg"/>
-                <img class="right" src="/img/family_pic.jpg"/>
-                <div class="honor">
+                <div class="button">
                     <h4>The Bridesmaids</h4>
-                    <img src="/img/family_pic.jpg"/>
-                    <img src="/img/family_pic.jpg"/>
+                </div>
+                <div class="list">
+                    <h5>Matrons of Honour</h5>
+                    <p>
+                        Diana Caroll<br/>
+                        Jennifer Stevens
+                    </p>
+                    <h5>Bridesmaids</h5>
+                    <p>
+                        Shannon Iwamoto<br/>
+                        Jenna Shummoogum
+                    </p>
                 </div>
             </section>
 
@@ -81,8 +94,13 @@
                 <!-- <img class="wine_bottle" src="/img/red_wine_bottle.jpg" height="100px"> -->
                 <div id="imBookCntnr"> </div>
             </div>
+            <footer>
+                <p>&copy; 2014 Michelle Schuster</p>
+            </footer>
         </article>
     </body>
+
+    <script language="javascript" type="text/javascript" src="_js/ jquery.imBookFlip-1.3.js"></script>
     <script type="text/javascript">
         function openBook(story) {
             var book_container = $("#book_container");

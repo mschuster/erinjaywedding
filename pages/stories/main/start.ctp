@@ -1,2 +1,2 @@
-<h3>Once upon a time there lived a lovely little girl and a nice little boy who found each other when they grew up. Their names were <br/> Erin and Jay...</h3>
+<h3>Once upon a time there lived a lovely little girl and a nice little boy who found each other when they grew up. Their names were <br/> Erin and Jason...</h3>
 <img class="start_img" src="/img/story/Europe_629.jpg" height="100px">
