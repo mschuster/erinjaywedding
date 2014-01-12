@@ -48,87 +48,90 @@
             <section>
                 <h4>RSVP</h4>
             </section>
-            <form class="rsvp">
+            <form class="rsvp" name="rsvp" method="POST" action="/sendRSVP">
                 <p>
-                    <label>Name:</label><br/>
-                    <input type="text" placeholder="Your Name"><br/>
+                    <label>Name:</label>
+                    <input type="text" name="name" placeholder="Your Name"><br/>
                 </p>
-                <p>I'm planning on attending:</p>
-                <p>
-                    <input type="radio" name="event" onclick="$('.west').show(); $('.east').hide()">
+                <h5>I'm planning on attending</h5>
+                <p class="options">
+                    <input type="radio" name="event" value="west" onclick="$('.west').show(); $('.east').hide()">
                     <label>The Celebration in the WEST on August 16th</label> <br/>
-                    <input type="radio" name="event" onclick="$('.west').hide(); $('.east').show()">
+                    <input type="radio" name="event" value="east" onclick="$('.west').hide(); $('.east').show()">
                     <label>The Celebration in the EAST on August 23rd</label> <br/>
-                    <input type="radio" name="event" onclick="$('.west').show(); $('.east').show()">
+                    <input type="radio" name="event" value="both" onclick="$('.west').show(); $('.east').show()" checked="checked">
                     <label>BOTH!! Let's DO this!!!</label> <br/>
-                    <input type="radio" name="event" onclick="$('.west').hide(); $('.east').hide()">
+                    <input type="radio" name="event" value="none" onclick="$('.west').hide(); $('.east').hide()">
                     <label>Unfortunately I won't be able to make it to either.</label> <br/>
 
                 </p>
                 <h5 class="west">For the Celebration in the WEST (on August 16th)</h5>
-                <div id="west" class="with west">
+                <div id="west" class="options west">
                     <p>
-                        <input type="checkbox">I will be bringing a guest:
-                        <input id="guestName" name="guestName" type="text" placeholder="Your guest's name" size="30" onclick="$(this).val('');">
+                        <input type="checkbox" name="west-guest">I will be bringing a guest:
+                        <input name="west-guest-name" type="text" placeholder="Your guest's name" size="30" onclick="$(this).val('');">
                     </p>
                     <p>
-                        <input type="checkbox">and my children:
-                        <input id="guestName" name="guestName" type="text" placeholder="Your children(s) name(s)" size="30" onclick="$(this).val('');">
+                        <input type="checkbox" name="west-children-name">and my children:
+                        <input name="west-children-name" type="text" placeholder="Your children(s) name(s)" size="30" onclick="$(this).val('');">
                     </p>
 
 
                     <p>I am interested in staying for:</p>
                     <p>
-                        <input type="radio" name="stay" value="1"> One Night <br/>
-                        <input type="radio" name="stay" value="2+"> Two or more nights
+                        <input type="radio" name="west-stay" value="1" checked="checked"> One Night <br/>
+                        <input type="radio" name="west-stay" value="2+"> Two or more nights
                     </p>
 
 
                     <p>Please count me (and my party) in for Brunch on Sunday morning</p>
                     <p>
-                        <input type="radio" name="brunch" value="yes">Yes<br/>
-                        <input type="radio" name="brunch" value="no">No
+                        <input type="radio" name="west-brunch" value="yes" checked="checked">Yes<br/>
+                        <input type="radio" name="west-brunch" value="no">No
                     </p>
                 </div>
 
                 <h5 class="east">For the Celebration in the EAST (on August 23rd)</h5>
-                <div class="with east">
+                <div class="options east">
                     <p>
-                        <input type="checkbox">I will be bringing a guest:
-                        <input id="guestName" name="guestName" type="text" placeholder="Your guest's name" size="30" onclick="$(this).val('');">
+                        <input type="checkbox" name-"east-guest">I will be bringing a guest:
+                        <input id="guestName" name="guest-name-east" type="text" placeholder="Your guest's name" size="30" onclick="$(this).val('');">
                     </p>
                     <p>
-                        <input type="checkbox">and my children:
-                        <input id="guestName" name="guestName" type="text" placeholder="Your children(s) name(s)" size="30" onclick="$(this).val('');">
+                        <input type="checkbox" name="east-children">and my children:
+                        <input id="guestName" name="east-children-name" type="text" placeholder="Your children(s) name(s)" size="30" onclick="$(this).val('');">
                     </p>
                 </div>
-                <p>Address:</p>
-                <p>
-                    <table>
-                        <tr>
-                            <td>Appt / Suite #</td>
-                            <td><input size="5" placeholder="Appt#"></td>
-                        </tr>
-                        <tr>
-                            <td>Street</td>
-                            <td><input size="50" placeholder="Street Number/Name"></td>
-                        </tr>
-                        <tr>
-                            <td>City, Province</td>
-                            <td><input placeholder="City"> <input size="5" placeholder="Prov"></td>
-                        </tr>
-                        <tr>
-                            <td>Postal Code</td>
-                            <td><input size="10" placeholder="Postal Code"></td>
-                        </tr>
-                    </table>
+                <h5>Address</h5>
+                <table class="options address">
+                    <tr>
+                        <td>Appt / Suite #</td>
+                        <td><input name="appt" size="5" placeholder="Appt#"></td>
+                    </tr>
+                    <tr>
+                        <td>Street</td>
+                        <td><input name="street" size="50" placeholder="Street Number/Name"></td>
+                    </tr>
+                    <tr>
+                        <td>City, Province</td>
+                        <td><input name="city" placeholder="City"> <input name="province" size="5" placeholder="Prov"></td>
+                    </tr>
+                    <tr>
+                        <td>Postal Code</td>
+                        <td><input name="postalcode" size="10" placeholder="Postal Code"></td>
+                    </tr>
+                </table>
+                <h5>Questions or Comments</h5>
+                <p class="options">
+                    <textarea name="comments" cols="50" rows="5"></textarea>
                 </p>
-                <p>Any Questions or Comments:</p>
-                <textarea cols="35" rows="5"></textarea>
 
-                <footer>
-                    <input type="submit" value="Submit Form">
-                </footer>
+
+                <p>
+                    <input type="submit" value="Send RSVP">
+                </p>
+
+                <footer> <p>&copy; 2014 Michelle Schuster</p> </footer>
             </form>
         </article>
 

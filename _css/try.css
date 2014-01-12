@@ -268,11 +268,12 @@ footer p {
 	padding-left:20px;
 	text-align: left;
 }
-.rsvp .with {
-	/*display:none;*/
-	margin-top:-5px;
-	padding-left:30px;
-	padding-bottom: 10px;
+.rsvp .options {
+	padding: 10px 0 10px 30px;
+}
+.rsvp .address {
+	padding-bottom:10px;
+	padding-top:10px;
 }
 
 
