@@ -3,17 +3,8 @@
 
 import os
 from google.appengine.ext import webapp
-# from google.appengine.ext.webapp import util
 from google.appengine.ext.webapp import template
-
 from google.appengine.api import mail
-
-# Import smtplib for the actual sending function
-import smtplib
-
-# Import the email modules we'll need
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 
 def buildWestInfo(req):
 	html = "<p>"
@@ -35,7 +26,7 @@ def buildWestInfo(req):
 	brunch = req.get('west-brunch')
 
 	html += "Staying for " + stay + " Night(s) <br/>"
-	html += "Atteding the brunch: " + brunch + " <br/>"
+	html += "Attending the brunch: " + brunch
 	html += "</p>"
 
 	return html
@@ -62,13 +53,17 @@ def buildEastInfo(req):
 def buildEmail(name, eventHtml, addressHtml, comments):
 
 	me = "mschuster@erinjaywedding.ca"
-	you = "schuster.mb@gmail.com"
 	subject = "RSVP - "+name
 
-	html = """\
+	message = mail.EmailMessage(sender=me,
+								subject=subject)
+
+	message.to = "schuster.mb@gmail.com"
+
+	message.html = """\
 	<html>\
 		<body>\
-			<h2>Wedding RSVP</h2><br>\
+			<h2>Wedding RSVP</h2>\
 			<h4>From: """ + name + """</h4>\
 			""" + eventHtml + addressHtml + """\
 			<h3>Additional Comments / Questions:</h3>"\
@@ -76,23 +71,8 @@ def buildEmail(name, eventHtml, addressHtml, comments):
 		</body>
 	</html>"""
 
-	mail.send_mail(sender=me,
-					to=you,
-					subject=subject,
-					body=html)
+	mail.send()
 
-	# msg = MIMEMultipart('alternative')
-	# msg["From"] = me
-	# msg["To"] = you
-	# msg["Subject"] = "RSVP - "+name
-
-	# message = MIMEText(html, 'html')
-	# msg.attach(message)
-
-	# s = smtplib.SMTP('localhost')
-	# print s
-	# s.sendmail(me, you, msg.as_string())
-	# s.quit()
 
 class MainHandler(webapp.RequestHandler):
 	def get (self, q):
