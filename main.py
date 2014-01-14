@@ -61,7 +61,7 @@ def buildEastInfo(req):
 
 def buildEmail(name, eventHtml, addressHtml, comments):
 
-	me = "rsvp@erinjaywedding.ca"
+	me = "mschuster@erinjaywedding.ca"
 	you = "schuster.mb@gmail.com"
 	subject = "RSVP - "+name
 
@@ -113,8 +113,6 @@ class RSVPHandler(webapp.RequestHandler):
 			print "no arguments"
 			return
 
-		print self.request.arguments()
-
 		name = self.request.get('name')
 
 		## Event Information
@@ -159,7 +157,5 @@ class RSVPHandler(webapp.RequestHandler):
 		self.response.out.write (template.render (path, {}))
 
 
-# def main ():
 application = webapp.WSGIApplication ([('/sendRSVP', RSVPHandler), ('/(.*)', MainHandler)], debug=True)
-  # util.run_wsgi_app (application)
 
