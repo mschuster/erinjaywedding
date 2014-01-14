@@ -65,15 +65,15 @@ def buildEmail(name, eventInfo, address, comments):
 		<body>
 			<h2>Wedding RSVP</h2>
 			<h4>From: """ + name + """</h4>
-			<h3>""" + eventInfo.attending + """</h3>
+			<h3>""" + eventInfo['attending'] + """</h3>
 			<p>\
-				""" + eventInfo.detail + """\
+				""" + eventInfo['detail'] + """\
 			</p>\
 			<h3>Address: </h3>
 			<p>
-				""" + address.street + """ <br/>
-				""" + address.city + """, """ + address.province + """<br/>
-				""" + address.postalcode + """
+				""" + address['street'] + """ <br/>
+				""" + address['city'] + """, """ + address['province'] + """<br/>
+				""" + address['postalcode'] + """
 			</p>
 			<h3>Additional Comments / Questions:</h3>"
 			<p>""" + comments + """</p>
@@ -86,13 +86,13 @@ def buildEmail(name, eventInfo, address, comments):
 		From: """ + name + """
 
 		Event Information: \
-		""" + eventInfo.attending + """
-		""" + eventInfo.detail + """
+		""" + eventInfo['attending'] + """
+		""" + eventInfo['detail'] + """
 
 		Address:
-		""" + address.street + """
-		""" + address.city + """, """ + address.province + """
-		""" + address.postalcode + """
+		""" + address['street'] + """
+		""" + address['city'] + """, """ + address['province'] + """
+		""" + address['postalcode'] + """
 
 		Additional Comments: \
 		""" + comments + """
@@ -126,32 +126,32 @@ class RSVPHandler(webapp.RequestHandler):
 		## Event Information
 		event = self.request.get('event')
 		eventInfo = {}
-		eventInfo.attending = "Unable to attend either event"
-		eventInfo.detail = ""
+		eventInfo['attending'] = "Unable to attend either event"
+		eventInfo['detail'] = ""
 		if event == "west":
-			eventInfo.attending = "Attending Event in the West"
-			eventInfo.detail = buildWestInfo(self.request)
+			eventInfo['attending'] = "Attending Event in the West"
+			eventInfo['detail'] = buildWestInfo(self.request)
 		elif event == "east":
-			eventInfo.attending = "Attending Event in the East"
-			eventInfo.detail = buildEastInfo(self.request)
+			eventInfo['attending'] = "Attending Event in the East"
+			eventInfo['detail'] = buildEastInfo(self.request)
 		elif event == "both":
-			eventInfo.attending = "Attending Both Events"
-			eventInfo.detail = "<h4>Information for event in the West</h4>"
-			eventInfo.detail = eventInfo.detail + buildWestInfo(self.request)
-			eventInfo.detail = eventInfo.detail + "<h4>Information for event in the East</h4>"
-			eventInfo.detail = eventInfo.detail + buildEastInfo(self.request)
+			eventInfo['attending'] = "Attending Both Events"
+			eventInfo['detail'] = "<h4>Information for event in the West</h4>"
+			eventInfo['detail'] = eventInfo['detail'] + buildWestInfo(self.request)
+			eventInfo['detail'] = eventInfo['detail'] + "<h4>Information for event in the East</h4>"
+			eventInfo['detail'] = eventInfo['detail'] + buildEastInfo(self.request)
 
 		##  Address Information
 		address = {}
 
 		apptno = self.request.get('appt')
-		address.street = self.request.get('street')
-		address.city = self.request.get('city')
-		address.province = self.request.get('province')
-		address.postalcode = self.request.get('postalcode')
+		address['street'] = self.request.get('street')
+		address['city'] = self.request.get('city')
+		address['province'] = self.request.get('province')
+		address['postalcode'] = self.request.get('postalcode')
 
 		if apptno:
-			address.street = "#" + apptno + " - " + address.street
+			address['street'] = "#" + apptno + " - " + address['street']
 
 
 		comments = self.request.get('comments')
@@ -159,7 +159,7 @@ class RSVPHandler(webapp.RequestHandler):
 		buildEmail(name, eventInfo, address, comments)
 
 		path = os.path.join (os.path.dirname (__file__), 'pages/rsvp.html')
-		self.response.headers ['Content-Type'] = 'text/html'
+		self.response.headers['Content-Type'] = 'text/html'
 		self.response.out.write (template.render (path, {}))
 
 
