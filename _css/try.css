@@ -90,7 +90,7 @@ h5 {
 }
 
 a {
-	color: #FFF;
+	color: #1985D1; /* rgb(0, 119, 204); */
 	text-decoration: none;
 }
 a:hover {
@@ -349,6 +349,9 @@ footer p {
 	.euro_img {
 		margin-left:-70px;
 		transform:rotate(20deg);
+	}
+	.book_container .title_img {
+		height:150px;
 	}
 
 

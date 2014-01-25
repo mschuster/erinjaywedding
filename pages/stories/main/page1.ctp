@@ -1,2 +1,3 @@
-<img class="beach_img" src="/img/story/beach.jpg" height="150px;">
-<img class="euro_img" src="/img/story/Europe_343.jpg" height="150px;">
+<p>
+	It was only years later that Erin and Jason discovered  there might be more to their colleague-type relationship. It took many months after that before they actually went on a first date – and over great conversation and food (Jason’s first taste of sushi – though Erin didn’t know it yet!), a bond started to form.
+</p>

@@ -1,2 +1,5 @@
-<h3>Whether sitting at home, playing on the beach or travelling the world, they started doing many things together.
-	<br/> In fact, they even decided to live together...</h3>
+<p>
+	Weeks turned into months, and that bond grew stronger. It even beat the odds of an 8 month term long distance relationship! Jason and Erin even tested the relationship by travelling together – spending almost three weeks touring Italy. There’s a good reason it’s called one of the most romantic places in the world!
+	<br/>
+	<img src="/img/story/beach.jpg" height="100px">
+</p>
