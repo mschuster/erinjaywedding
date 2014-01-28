@@ -1,3 +1,3 @@
 <p>
-	Jennifer Stevens, aka Jennifer Schuster is the other Matron of Honor for the same reason as above. Jennifer and Erin were almost inseparable throughout grade school, where many a sleep over, book writing session, and shenanigans at recess ensued. Part of Erin’s life, and continuously so, Jennifer certainly holds the title of honor!
+	Jennifer Stevens is also a Matron of Honor as Erin has known Jennifer for as long as she can remember. Jennifer and Erin were almost inseparable throughout grade school, where many a sleep over, book writing session, and shenanigans at recess ensued. All the way through grade school, and even through University, Erin and Jennifer have stayed friends! 
 </p>

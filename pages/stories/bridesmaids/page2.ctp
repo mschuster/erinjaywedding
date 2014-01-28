@@ -1,3 +1,3 @@
 <p>
-	Diana Caroll, aka Diana Miong is considered one of two Matrons of Honor as she has been in the brides life for as long as all three can remember! Erin and Diana went to school together starting back in Highwood Elementary and were close friends even in grade one. Erin was in another peer group, and quickly realized it was headed down the wrong path. Fortunately, the teacher agreed, and Erin was moved to another section of the class. The friendship between her and Diana thus began.
+	Diana Carroll, aka Diana Miong is considered one of two Matrons of Honor. Erin and Diana went to school together starting back in Highwood Elementary and were close friends starting in grade one. Junior high followed, and while the girls went to separate High Schools, they met up again at Mount Royal College before Erin transferred to the University of Calgary. Erin was even a Co-MC at Diana’s wedding to Mike Carroll in 2009.
 </p>
