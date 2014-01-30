@@ -239,9 +239,6 @@ nav a {
 .story h4, .main p {
 	margin:0;
 }
-.story img {
-	height:100px;
-}
 
 .story .button {
 	cursor:pointer;
@@ -368,19 +365,49 @@ footer p {
 	.imBookPage .imBookPage {
 		cursor: pointer;
 		width:100%;
+		display:table;
 	}
 
 	.book_container h3, .book_container p {
 		color:#640615;
-		top:auto;
+		/*top:auto;*/
 		vertical-align: center;
 	}
 	.book_container p {
 		padding:20px;
 	}
+	.book_container .middle {
+		display:table-cell;
+		vertical-align: middle;
+	}
 
 	.book_container .title_img {
 		height:150px;
+	}
+
+	.book_container .top {
+		height:135px;
+		margin-top: -27px;
+	}
+	.book_container .left {
+		height: 190px;
+		position: absolute;
+		top: 100px;
+		z-index: 1;
+		left: 30px;
+	}
+	.book_container .right {
+		height: 82px;
+		right: 29px;
+		top: 116px;
+		position: absolute;
+		transform: rotate(9deg);
+	}
+	.book_container .bottom_right {
+		height:140px;
+		float: right;
+		transform: rotate(-10deg);
+		margin-top: 100px;
 	}
 
 
@@ -453,6 +480,8 @@ footer p {
 		margin-left: 100px;
 	}
 
+
+	
 	.story .button {
 		cursor:auto;
 		display: inline-block;

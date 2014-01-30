@@ -1,5 +1,3 @@
-<p>
-	Weeks turned into months, and that bond grew stronger. It even beat the odds of an 8 month term long distance relationship! Jason and Erin even tested the relationship by travelling together – spending almost three weeks touring Italy. There’s a good reason it’s called one of the most romantic places in the world!
-	<br/>
-	<img src="/img/story/beach.jpg" height="100px">
+<p class="middle">
+	It was only years later that Erin and Jason discovered  there might be more to their colleague-type relationship. It took many months after that before they actually went on a first date – and over great conversation and food (Jason’s first taste of sushi – though Erin didn’t know it yet!), a bond started to form.
 </p>

@@ -1,1 +1,1 @@
-<h3>The End</h3>
+<h3 class="middle">The End</h3>

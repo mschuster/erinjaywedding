@@ -1,3 +1,3 @@
-<p>
+<p class="middle">
 	Shannon is Erin’s cousin on her Step-mother, Bonnie’s, side of the family. The two girls grew up attending many gatherings for each other, from birthday parties, to thanksgivings, Halloweens, Christmas dinners and more! Shannon graciously agreed to assist in wedding planning (and even to be a personal consultant) during the whole planning year! A very talented seamstress – Shannon has been instrumental in designing Erin’s wedding dress!!
 </p>

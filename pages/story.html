@@ -46,15 +46,14 @@
             </nav>
             <section class="story main" onclick="openBook()">
                 <div class="button">
-                    <img src="/img/story/camera_051.jpg"/>
+                    <img src="/img/shuswap3.jpg" height="140px"/>
 
-                    <h4>A little bit about the bride and groom</h4>
-                    <p>This can be a quick blurb about Mr. Jason and Ms. Erin (soon to be Mrs. Jason)</p>
+                    <h4>The Bride and Groom</h4>
                 </div>
             </section>
             <section class="story main">
                 <h4>The Best Boy</h4>
-                <img src="/img/family_pic.jpg"/>
+                <img src="/img/bestboy.jpg" height="150px"/>
                 <h4>Alex</h4>
             </section>
 
@@ -102,7 +101,7 @@
     <script type="text/javascript">
         function openBook(story) {
             var book_container = $("#book_container");
-            if(book_container.css("display") != "none") {
+            if(book_container.css("display") != "none" || document.documentElement.clientWidth < 770) {
                 return false;
             }
             book_container.fadeIn(400);

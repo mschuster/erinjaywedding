@@ -1,3 +1,3 @@
-<p>
+<p class="middle">
 	Diana Carroll, aka Diana Miong is considered one of two Matrons of Honor. Erin and Diana went to school together starting back in Highwood Elementary and were close friends starting in grade one. Junior high followed, and while the girls went to separate High Schools, they met up again at Mount Royal College before Erin transferred to the University of Calgary. Erin was even a Co-MC at Diana’s wedding to Mike Carroll in 2009.
 </p>
