@@ -130,16 +130,16 @@ class RSVPHandler(webapp.RequestHandler):
 		eventInfo['attending'] = "Unable to attend either event"
 		eventInfo['detail'] = ""
 		if event == "west":
-			eventInfo['attending'] = "Attending Event in the West"
+			eventInfo['attending'] = "Attending Celebrations in BC"
 			eventInfo['detail'] = buildWestInfo(self.request)
 		elif event == "east":
-			eventInfo['attending'] = "Attending Event in the East"
+			eventInfo['attending'] = "Attending Lunch Celebration in Toronto"
 			eventInfo['detail'] = buildEastInfo(self.request)
 		elif event == "both":
 			eventInfo['attending'] = "Attending Both Events"
-			eventInfo['detail'] = "<h4>Information for event in the West</h4>"
+			eventInfo['detail'] = "<h4>Information for celebrations in BC</h4>"
 			eventInfo['detail'] = eventInfo['detail'] + buildWestInfo(self.request)
-			eventInfo['detail'] = eventInfo['detail'] + "<h4>Information for event in the East</h4>"
+			eventInfo['detail'] = eventInfo['detail'] + "<h4>Information for lunch in Toronto</h4>"
 			eventInfo['detail'] = eventInfo['detail'] + buildEastInfo(self.request)
 
 		##  Address Information

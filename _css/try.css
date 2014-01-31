@@ -390,11 +390,11 @@ footer p {
 		margin-top: -27px;
 	}
 	.book_container .left {
-		height: 190px;
+		height: 170px;
 		position: absolute;
-		top: 100px;
+		top: 105px;
 		z-index: 1;
-		left: 30px;
+		left: 20px;
 	}
 	.book_container .right {
 		height: 82px;
