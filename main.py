@@ -58,8 +58,8 @@ def buildEmail(name, eventInfo, address, comments):
 	message = mail.EmailMessage(sender=me,
 								subject=subject)
 
-	message.to = "schuster.mb@gmail.com"
-	# message.to = "guardian.angelhs@gmail.com"
+	# message.to = "schuster.mb@gmail.com"
+	message.to = "guardian.angelhs@gmail.com"
 
 	message.html = """\
 	<html>
@@ -76,7 +76,7 @@ def buildEmail(name, eventInfo, address, comments):
 				""" + address['city'] + """, """ + address['province'] + """<br/>
 				""" + address['postalcode'] + """
 			</p>
-			<h3>Additional Comments / Questions:</h3>"
+			<h3>Additional Comments / Questions:</h3>
 			<p>""" + comments + """</p>
 		</body>
 	</html>"""

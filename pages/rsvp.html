@@ -48,7 +48,6 @@
             <section>
                 <h4>RSVP</h4>
             </section>
-            <p id="rsvpMessage"></p>
             <form class="rsvp" name="rsvp" method="POST" action="/sendRSVP">
                 <p>
                     <label>Name:</label>
@@ -135,14 +134,5 @@
             </form>
             <footer> <p>&copy; 2014 Mushi Web Development & Design</p> </footer>
         </article>
-
     </body>
-    <script type="text/javascript">
-        if(window.location.href.indexOf('message=sent') != -1) {
-            $("#rsvpMessage").html("Your RSVP has been sent");
-        } else if(window.location.href.indexOf('message=error') != -1) {
-            $("#rsvpMessage").html("Error! Your RSVP could not be sent. Please try again.")
-                            .addClass("error");
-        }
-    </script>
 </html>
