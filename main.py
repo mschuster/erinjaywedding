@@ -120,7 +120,7 @@ class RSVPHandler(webapp.RequestHandler):
 	def post (self):
 		if not self.request.arguments():
 			print "no arguments"
-			path = os.path.join (os.path.dirname (__file__), 'pages/rsvp.html?message=error')
+			path = os.path.join (os.path.dirname (__file__), 'pages/rsvpError.html')
 			self.response.headers['Content-Type'] = 'text/html'
 			self.response.out.write (template.render (path, {}))
 			return
@@ -162,7 +162,7 @@ class RSVPHandler(webapp.RequestHandler):
 
 		buildEmail(name, eventInfo, address, comments)
 
-		path = os.path.join (os.path.dirname (__file__), 'pages/rsvp.html?message=sent')
+		path = os.path.join (os.path.dirname (__file__), 'pages/rsvpSent.html')
 		self.response.headers['Content-Type'] = 'text/html'
 		self.response.out.write (template.render (path, {}))
 

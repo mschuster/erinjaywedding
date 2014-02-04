@@ -309,17 +309,6 @@ footer p {
 	padding-top:10px;
 }
 
-#rsvpMessage {
-	background-color: #66A266;
-	color: white;
-	text-align: center;
-	padding: 10px 0;
-	font-weight: bold;
-}
-.error {
-	background-color: #AD5C5C !important;
-}
-
 
 .background-cover {
 	background: transparent;
