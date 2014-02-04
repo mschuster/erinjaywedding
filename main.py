@@ -58,8 +58,8 @@ def buildEmail(name, eventInfo, address, comments):
 	message = mail.EmailMessage(sender=me,
 								subject=subject)
 
-	# message.to = "schuster.mb@gmail.com"
-	message.to = "guardian.angelhs@gmail.com"
+	message.to = "schuster.mb@gmail.com"
+	# message.to = "guardian.angelhs@gmail.com"
 
 	message.html = """\
 	<html>
@@ -120,6 +120,9 @@ class RSVPHandler(webapp.RequestHandler):
 	def post (self):
 		if not self.request.arguments():
 			print "no arguments"
+			path = os.path.join (os.path.dirname (__file__), 'pages/rsvp.html?message=error')
+			self.response.headers['Content-Type'] = 'text/html'
+			self.response.out.write (template.render (path, {}))
 			return
 
 		name = self.request.get('name')
@@ -159,7 +162,7 @@ class RSVPHandler(webapp.RequestHandler):
 
 		buildEmail(name, eventInfo, address, comments)
 
-		path = os.path.join (os.path.dirname (__file__), 'pages/rsvp.html')
+		path = os.path.join (os.path.dirname (__file__), 'pages/rsvp.html?message=sent')
 		self.response.headers['Content-Type'] = 'text/html'
 		self.response.out.write (template.render (path, {}))
 
