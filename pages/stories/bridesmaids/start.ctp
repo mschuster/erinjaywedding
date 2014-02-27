@@ -1,2 +1,2 @@
 <h3>The Bridesmaids</h3>
-<img src="/img/story/dress.svg" height="200px"/>
+<img src="/img/story/dress.png" height="200px"/>
